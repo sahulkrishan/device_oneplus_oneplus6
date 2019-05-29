@@ -21,8 +21,6 @@
 #
 $(call inherit-product, vendor/oneplus/oneplus6/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
-$(call inherit-product, vendor/omni/config/phone-xxhdpi-4096-dalvik-heap.mk)
-$(call inherit-product, vendor/omni/config/phone-xxhdpi-2048-hwui-memory.mk)
 
 #from build treble includes
 PRODUCT_COPY_FILES += \
@@ -73,11 +71,6 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-PRODUCT_PACKAGES += \
-    omni_charger_res_images \
-    animation.txt \
-    font_charger.png
 
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -196,8 +189,8 @@ PRODUCT_PACKAGES += \
     lib_driver_cmd_qcwcn
 
 # Camera
-PRODUCT_PACKAGES += \
-    SnapdragonCamera2
+#PRODUCT_PACKAGES += \
+#    SnapdragonCamera2
 
 # power
 PRODUCT_PACKAGES += \
@@ -236,8 +229,8 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0 \
     libandroid_net
 
-PRODUCT_PACKAGES += \
-    DeviceParts
+#PRODUCT_PACKAGES += \
+#    DeviceParts
 
 PRODUCT_PACKAGES += \
     vndk_package
